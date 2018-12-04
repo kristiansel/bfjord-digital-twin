@@ -1,0 +1,30 @@
+{
+  "compilerOptions": {
+    "declaration": true,
+    "outDir": "./dist",
+    "types": [],
+    "baseUrl": ".",
+    "module": "commonjs",
+    "target": "es2015", 
+    "lib": ["es6", "dom"],
+    "sourceMap": true,
+    "moduleResolution": "node",
+    "forceConsistentCasingInFileNames": true,
+    "noImplicitReturns": true,
+    "strict": true,
+    "suppressImplicitAnyIndexErrors": true,
+    "noUnusedLocals": true,
+    "skipLibCheck": true,
+    "experimentalDecorators": true,
+    "resolveJsonModule": true,
+    "typeRoots": ["src"]
+  },
+  "exclude": [
+      "bin",
+      "dist",
+      "node_modules",
+      "webpack",
+      "ClientApp/setup-tests/setup-tests.ts",
+      "**/*.test.*"
+  ]
+}
