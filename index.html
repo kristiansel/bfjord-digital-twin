@@ -1,21 +1,31 @@
 <!doctype html>
-<meta charset="UTF-8"> 
+<meta charset="UTF-8">
 <html>
-  <head>
-    <title>Dashboard - Inspection by drone</title>
-  </head>
-  <body>
-    <style>
-      body {
-        font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-      }
-    </style>
 
-    <div id="react-root"></div>
+<head>
+  <title>Dashboard - Inspection by drone</title>
+  <script type="module">
+    import "/node_modules/@technology/webgl-viewer/dist/es/TrimbimPlugin.js";
+    import "/node_modules/@technology/webgl-viewer/dist/es/WebglViewer.js";
+  </script>
+</head>
 
-    <div id="container" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
-    <script src="http://www.yr.no/place/Norway/Hordaland/Tysnes/Bjørnafjorden/external_box_hour_by_hour.js"></script><noscript><a href="http://www.yr.no/place/Norway/Hordaland/Tysnes/Bjørnafjorden/">yr.no: Forecast for Bjørnafjorden</a></noscript>
-    <div id="container2" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
-    <script src="index.js"></script>
-  </body>
+<body>
+  <style>
+    body {
+      font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    }
+  </style>
+
+  <div id="react-root"></div>
+  <webgl-viewer active-tool="selection" id="viewer" model="./models/Bru.trb">
+    <trimbim-plugin slot="plugins"></trimbim-plugin>
+  </webgl-viewer>
+  <div id="container" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
+  <script src="http://www.yr.no/place/Norway/Hordaland/Tysnes/Bjørnafjorden/external_box_hour_by_hour.js"></script><noscript><a
+      href="http://www.yr.no/place/Norway/Hordaland/Tysnes/Bjørnafjorden/">yr.no: Forecast for Bjørnafjorden</a></noscript>
+  <div id="container2" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
+  <script src="index.js"></script>
+</body>
+
 </html>
