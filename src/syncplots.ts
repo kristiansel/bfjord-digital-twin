@@ -1,5 +1,4 @@
-// tslint:disable:all
-const Highcharts: any = require('highcharts');
+import {Highcharts} from './highcharts';
 
 /*
 The purpose of this demo is to demonstrate how multiple charts on the same page

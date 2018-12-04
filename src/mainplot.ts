@@ -1,7 +1,4 @@
-import './syncplots';
-
-// tslint:disable:all
-const Highcharts: any = require('highcharts');
+import {Highcharts} from './highcharts';
 
 fetch('assets/usdeur.json')
   .then(data => data.json())
