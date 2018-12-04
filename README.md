@@ -1,0 +1,1 @@
+Digital twin for the "Bjørnefjorden" bridge
