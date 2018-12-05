@@ -1,13 +1,16 @@
 
 //import { Matrix4, Vector3, Euler } from "https://cdnjs.cloudflare.com/ajax/libs/three.js/95/three.module.js";
-customElements.whenDefined("webgl-viewer").then(() => {
+customElements.whenDefined("webgl-viewer").then(async () => {
     const viewer = document.querySelector('webgl-viewer');
     const trimbim = document.querySelector('trimbim-plugin');
+    viewer.settings.backgroundColor = 0xffffff;
+    await viewer.load('./models/Bru.trb');
+    await viewer.load('./models/Pongtonger.trb', { resetCamera: false });
+    await viewer.load('./models/ortho.trb', { resetCamera: false });
 
-    viewer.load('./models/flightpath2.trb');
-    viewer.load('./models/Pongtonger.trb');
-    //viewer.load('./models/terrain.trb');
-    viewer.load('./models/crack1.trb');
+    await viewer.load('./models/flightpath2.trb', { resetCamera: false });
+    await viewer.load('./models/crack1.trb', { resetCamera: false });
+
     viewer.addEventListener("selection", function (e) {
         console.log(e);
 
