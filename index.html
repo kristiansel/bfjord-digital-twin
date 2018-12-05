@@ -4,6 +4,7 @@
 
 <head>
   <title>Dashboard - Inspection by drone</title>
+  <link rel="stylesheet" type="text/css" href="styles.css">
   <script type="module">
     import "/node_modules/@technology/webgl-viewer/dist/es/TrimbimPlugin.js";
     import "/node_modules/@technology/webgl-viewer/dist/es/WebglViewer.js";
@@ -21,14 +22,21 @@
       font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     }
   </style>
-
-  <div id="react-root"></div>
-  <webgl-viewer active-tool="selection" id="viewer" model="./models/Bru.trb">
-    <trimbim-plugin slot="plugins"></trimbim-plugin>
-  </webgl-viewer>
-  <div id="container" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
-  <script src="https://www.yr.no/place/Norway/Hordaland/Tysnes/Bjørnafjorden/external_box_hour_by_hour.js"></script><noscript><a href="https://www.yr.no/place/Norway/Hordaland/Tysnes/Bjørnafjorden/">yr.no: Forecast for Bjørnafjorden</a></noscript>
-  <div id="container2" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
+  <div class="wrapper">
+    <div class="box topbar">Top bar</div>
+    <div class="box info">
+      <div id="container2" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
+    </div>
+    <div class="box view">
+      <webgl-viewer active-tool="selection" id="viewer" model="./models/Bru.trb">
+        <trimbim-plugin slot="plugins"></trimbim-plugin>
+      </webgl-viewer>
+    </div>
+    <div class="box sensor">
+      <div id="container" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
+    </div>
+  </div>
+  <!-- <script src="https://www.yr.no/place/Norway/Hordaland/Tysnes/Bjørnafjorden/external_box_hour_by_hour.js"></script><noscript><a href="https://www.yr.no/place/Norway/Hordaland/Tysnes/Bjørnafjorden/">yr.no: Forecast for Bjørnafjorden</a></noscript> -->
   <script src="index.js"></script>
 </body>
 

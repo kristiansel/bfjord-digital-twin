@@ -1,0 +1,42 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+.wrapper {
+  overflow: hidden;
+  display: grid;
+  grid-gap: 0px;
+  grid-template-columns: 30vw 35vw 35vw;
+  /* grid-template-rows: 100px 500px 100px; */
+  grid-template-areas:
+  "topbar topbar topbar"
+  "info   view   view"
+  "info   sensor sensor";
+  background-color: #fff;
+  color: #444;
+  /* width: 100vw;
+  height: 100vh; */
+}
+
+.box {
+  /* background-color: #444;
+  color: #fff;
+  border-radius: 5px;
+  padding: 20px;
+  font-size: 150%; */
+}
+
+.topbar {
+  grid-area: topbar;
+}
+.info {
+  grid-area: info;
+  overflow: auto;
+}
+.view {
+  grid-area: view;
+}
+.sensor {
+  grid-area: sensor;
+}

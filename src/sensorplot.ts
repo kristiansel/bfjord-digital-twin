@@ -11,7 +11,8 @@ fetch('assets/usdeur.json')
     }
     Highcharts.chart('container', {
       chart: {
-        zoomType: 'x'
+        zoomType: 'x',
+        height: 300
       },
       title: {
         text: 'Bridge oscillation frequency'

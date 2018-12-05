@@ -78,7 +78,7 @@ function syncExtremes(this: any, e: any) {
 }
 
 // Get the data. The contents of the data file can be viewed at
-fetch('https://cdn.rawgit.com/highcharts/highcharts/057b672172ccc6c08fe7dbb27fc17ebca3f5b770/samples/data/activity.json')
+fetch('assets/envdata.json')
   .then(response => response.json())
   .then(activity => { 
     activity.datasets.forEach((dataset: any, i: number) => {
@@ -96,7 +96,8 @@ fetch('https://cdn.rawgit.com/highcharts/highcharts/057b672172ccc6c08fe7dbb27fc1
         chart: {
           marginLeft: 40, // Keep all charts left aligned
           spacingTop: 20,
-          spacingBottom: 20
+          spacingBottom: 20,
+          height: 200
         },
         title: {
           text: dataset.name,
