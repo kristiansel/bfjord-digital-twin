@@ -84,18 +84,27 @@ customElements.whenDefined("webgl-viewer").then(async () => {
             // await delay(2000);
             await viewer.load('./models/crack2.trb', { resetCamera: false });
             viewer.setCamera({ modelIds: ['./models/crack2.trb'] });
+            createCrack(1);
             await delay(2000);
+
             await viewer.load('./models/crack3.trb', { resetCamera: false });
             viewer.setCamera({ modelIds: ['./models/crack3.trb'] });
+            createCrack(2);
             await delay(2000);
+
             await viewer.load('./models/crack4.trb', { resetCamera: false });
             viewer.setCamera({ modelIds: ['./models/crack4.trb'] });
+            createCrack(3);
             await delay(2000);
+
             await viewer.load('./models/crack5.trb', { resetCamera: false });
             viewer.setCamera({ modelIds: ['./models/crack5.trb'] });
+            createCrack(4);
             await delay(2000);
+
             await viewer.load('./models/crack6.trb', { resetCamera: false });
             viewer.setCamera({ modelIds: ['./models/crack6.trb'] });
+            createCrack(5);
             // await delay(1000);
             // await viewer.load('./models/crack7.trb', { resetCamera: false });
             // viewer.setCamera({ modelIds: ['./models/crack7.trb'] });
@@ -136,3 +145,76 @@ customElements.whenDefined("webgl-viewer").then(async () => {
         });
     }
 });
+
+let focusImg = null;
+
+function createCrack(n) {
+    const container = document.getElementById("cracks-container");
+    const nStr = n.toString();
+
+    // <img class="crack-img" src="assets/crack2.jpg">
+    const img = document.createElement('img');
+    img.classList.add('crack-img');
+    img.src = "assets/crack" + nStr + ".jpg";
+    img.id = "crack-img-" + nStr;
+    img.onclick = () => {
+        if (focusImg) {
+            focusImg.classList.remove('crack-img-selected');
+        }
+        img.classList.add('crack-img-selected');
+        focusImg = img;
+        updateCrackInfo(n);
+    };
+
+    container.appendChild(img);
+}
+
+function updateCrackInfo(n) {
+    const info = document.getElementById("crack-info");
+    // clear it
+    info.innerHTML = '';
+
+    const i = n-1;
+    const crackInfo = crackInfos[i];
+
+    const crackNo = document.createElement('div');
+    crackNo.innerText = "Crack number: "+n.toString();
+    crackNo.style = "padding: 0px 0px 10px 0px;";
+    info.appendChild(crackNo);
+
+    Object.keys(crackInfo).forEach( key => {
+        const el = document.createElement('div');
+        el.innerText = key + ": "+crackInfo[key];
+        info.appendChild(el);
+    })
+
+    console.log("updated crack info with: ", crackInfo);
+}
+
+const crackInfos = [
+    {
+        Rissbredde: "0.7 mm",
+        Skadetype: "Belastning",
+        Beskrivelse: "Sprekk i utvikling, anbefales utbedret."
+    },
+    {
+        Rissbredde: "0.4 mm",
+        Skadetype: "Kalkavsetning", 
+        Beskrivelse: "Stabil, overvåk utvikling."
+    },
+    {
+        Rissbredde: "0.8 mm",
+        Skadetype: "Deformasjon",
+        Beskrivelse: "Sprekk i utvikling, anbefales utbedret."
+    },
+    {
+        Rissbredde: "0.8 mm",
+        Skadetype: "Belastning",
+        Beskrivelse: "Sprekk i utvikling, anbefales utbedret."
+    },
+    {
+        Rissbredde: "0.1 mm",
+        Skadetype: "Overflate",
+        Beskrivelse: "Stabil, ingen tiltak nødvendig."
+    }
+]

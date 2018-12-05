@@ -1,7 +1,6 @@
 .wrapper {
   overflow: hidden;
   display: grid;
-  grid-gap: 0px;
   grid-template-columns: 666px calc(100vw - 666px);
   grid-template-rows: 50px 375px calc(100vh - 425px);
   grid-template-areas:
@@ -20,7 +19,37 @@
 }
 .cracks {
   grid-area: cracks;
+
+  height: 100%;
+  overflow: auto;
 }
 .info {
   grid-area: info;
+}
+.card-container {
+  display: grid;
+  margin: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  grid-gap: 1rem;
+
+}
+.crack-img {
+  display: grid;
+  width: 100px;
+  height: 100px;
+  animation: fadein 2s;
+}
+
+.crack-img-selected {
+  border: blue solid 4px;
+}
+
+@keyframes fadein {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+.crack-info-container {
+  height: 100%;
+  overflow-y: auto;
 }
