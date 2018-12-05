@@ -1,4 +1,5 @@
 const path = require('path');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 module.exports = {
   mode: 'production',
@@ -23,5 +24,13 @@ module.exports = {
     alias: {
       assets: path.resolve(__dirname, 'assets')
     }
-  }
+  },
+  plugins: [
+    new CopyWebpackPlugin([
+      { from: 'node_modules/@technology/webgl-viewer/dist', to: 'node_modules/@technology/webgl-viewer/dist' },
+      { from: 'node_modules/@technology/webgl-viewer/images', to: 'node_modules/@technology/webgl-viewer/images' },
+      { from: 'node_modules/@technology/webgl-viewer/fonts', to: 'node_modules/@technology/webgl-viewer/fonts' },
+      { from: 'models/Bru.trb', to: 'models/Bru.trb'}
+    ])
+  ]
 };
