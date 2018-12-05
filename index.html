@@ -23,9 +23,13 @@
     }
   </style>
   <div class="wrapper">
-    <div class="box topbar">Top bar</div>
+    <div class="box topbar">
+      <button id="btn_environment" class="topbar-button">Environment</button>
+      <button id="btn_drone_inspection" class="topbar-button">Drone Inspection</button>
+      <button id="btn_traffic" class="topbar-button">Traffic</button>
+    </div>
     <div class="box info">
-      <div id="container2" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
+      <div id="container2" style="height: 400px; margin: 0 auto"></div>
     </div>
     <div class="box view">
       <webgl-viewer active-tool="selection" id="viewer" model="./models/Bru.trb">
