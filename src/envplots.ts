@@ -78,7 +78,7 @@ function syncExtremes(this: any, e: any) {
 }
 
 // Get the data. The contents of the data file can be viewed at
-fetch('assets/testdata.json')
+fetch('assets/plotdata.json')
   .then(response => response.json())
   .then(activity => { 
     activity.datasets.forEach((dataset: any, i: number) => {
@@ -97,7 +97,7 @@ fetch('assets/testdata.json')
           marginLeft: 40, // Keep all charts left aligned
           spacingTop: 20,
           spacingBottom: 20,
-          height: 200
+          height: 250
         },
         title: {
           text: dataset.name,
@@ -116,9 +116,9 @@ fetch('assets/testdata.json')
           events: {
             setExtremes: syncExtremes
           },
-          labels: {
-            format: '{value} km'
-          },
+          // labels: {
+          //   format: '{value} km'
+          // },
           type: 'datetime'
         },
         yAxis: {
