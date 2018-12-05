@@ -31,6 +31,7 @@ customElements.whenDefined("webgl-viewer").then(async () => {
 
     document.getElementById("fullscreen").addEventListener('click', function (e) {
         console.info('fullscreen selected!');
+        const wrapperviewer = document.getElementById("viewerwrapper");
         if (document.webkitFullscreenEnabled) {
             document.webkitExitFullscreen();
           }
@@ -41,13 +42,13 @@ customElements.whenDefined("webgl-viewer").then(async () => {
             document.msExitFullscreen();
           }
           if (viewer.webkitRequestFullscreen) {
-            viewer.webkitRequestFullscreen();
+            wrapperviewer.webkitRequestFullscreen();
           }
           if (viewer.mozRequestFullScreen) {
-            viewer.mozRequestFullScreen();
+            wrapperviewer.mozRequestFullScreen();
           }
           if (viewer.msRequestFullscreen) {
-            viewer.msRequestFullscreen();
+            wrapperviewer.msRequestFullscreen();
           }
     });
 
