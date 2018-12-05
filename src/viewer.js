@@ -6,7 +6,7 @@ customElements.whenDefined("webgl-viewer").then(async () => {
     viewer.settings.backgroundColor = 0xffffff;
     await viewer.load('./models/bru2.trb');
     await viewer.load('./models/pongtonger2.trb', { resetCamera: false });
-    //await viewer.load('./models/ortho.trb', { resetCamera: false });
+    await viewer.load('./models/ortho.trb', { resetCamera: false });
 
     viewer.addEventListener("selection", function (e) {
         console.log(e);
@@ -31,6 +31,7 @@ customElements.whenDefined("webgl-viewer").then(async () => {
 
     document.getElementById("fullscreen").addEventListener('click', function (e) {
         console.info('fullscreen selected!');
+        const wrapperviewer = document.getElementById("viewerwrapper");
         if (document.webkitFullscreenEnabled) {
             document.webkitExitFullscreen();
           }
@@ -41,13 +42,13 @@ customElements.whenDefined("webgl-viewer").then(async () => {
             document.msExitFullscreen();
           }
           if (viewer.webkitRequestFullscreen) {
-            viewer.webkitRequestFullscreen();
+            wrapperviewer.webkitRequestFullscreen();
           }
           if (viewer.mozRequestFullScreen) {
-            viewer.mozRequestFullScreen();
+            wrapperviewer.mozRequestFullScreen();
           }
           if (viewer.msRequestFullscreen) {
-            viewer.msRequestFullscreen();
+            wrapperviewer.msRequestFullscreen();
           }
     });
 
