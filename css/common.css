@@ -6,7 +6,7 @@
 .topbar-button {
   background-color: black;
   border: none;
-  color: white;
+  color: #cac6c6;
   padding: 5px 10px;
   margin-right: 5px;
   text-align: center;
@@ -29,6 +29,7 @@
   background-color: black;
   display: flex;
   align-items: center;
+  color: #cac6c6;
 }
 
 .title {
@@ -37,4 +38,14 @@
   color: #cac6c6;
   font-weight: 600;
   font-variant: small-caps;
+}
+
+.logo {
+  height: 48px;
+  width: 78px;
+  border: 1px solid black;
+}
+
+.flex-separator {
+  flex: 1;
 }

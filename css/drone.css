@@ -2,8 +2,8 @@
   overflow: hidden;
   display: grid;
   grid-gap: 0px;
-  grid-template-columns: 60vw 40vw;
-  grid-template-rows: 50px calc(50vh - 25px) calc(50vh - 25px);
+  grid-template-columns: 666px calc(100vw - 666px);
+  grid-template-rows: 50px 375px calc(100vh - 425px);
   grid-template-areas:
   "topbar   topbar"
   "video    view  "

@@ -3,9 +3,10 @@
 <html>
 
 <head>
-  <title>Dashboard - Inspection by drone</title>
+  <title>Bjørnaforden Bru Drift og Vedlikehold</title>
   <link rel="stylesheet" type="text/css" href="css/common.css">
   <link rel="stylesheet" type="text/css" href="css/index.css">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet"> 
   <script type="module">
     import "/node_modules/@technology/webgl-viewer/dist/es/TrimbimPlugin.js";
     import "/node_modules/@technology/webgl-viewer/dist/es/WebglViewer.js";
@@ -21,12 +22,14 @@
   </script>
   <style>
     body {
-      font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+      font-family: 'Open Sans', sans-serif;
     }
   </style>
   <div class="wrapper">
     <div class="box topbar">
+      <img class="logo" src="assets/statens_vegvesen_nice_inverted_logo.png"></img>
       <span class="title">Bjørnaforden Bru Drift og Vedlikehold</span>
+      <div class="flex-separator"></div>
       <a href="index.html" id="btn_environment" class="topbar-button">Environment</a>
       <a href="drone.html" id="btn_drone_inspection" class="topbar-button">Drone Inspection</a>
       <a href="traffic.html" id="btn_traffic" class="topbar-button">Traffic</a>
