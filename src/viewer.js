@@ -6,7 +6,7 @@ customElements.whenDefined("webgl-viewer").then(async () => {
     viewer.settings.backgroundColor = 0xffffff;
     await viewer.load('./models/bru2.trb');
     await viewer.load('./models/pongtonger2.trb', { resetCamera: false });
-    //await viewer.load('./models/ortho.trb', { resetCamera: false });
+    await viewer.load('./models/ortho.trb', { resetCamera: false });
 
     viewer.addEventListener("selection", function (e) {
         console.log(e);
