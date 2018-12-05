@@ -71,14 +71,17 @@ customElements.whenDefined("webgl-viewer").then(async () => {
     }
 
     const startdrone = document.getElementById("startdrone");
+    const droneVideo = document.getElementById("drone_video");
     if (startdrone) {
         startdrone.addEventListener('click', async function (e) {
             const delay = time => new Promise(res => setTimeout(() => res(), time));
+            droneVideo.play();
+            await delay(19160);
 
             console.info('startdrone selected!');
-            await viewer.load('./models/crack1.trb', { resetCamera: false });
-            viewer.setCamera({ modelIds: ['./models/crack1.trb'] });
-            await delay(2000);
+            // await viewer.load('./models/crack1.trb', { resetCamera: false });
+            // viewer.setCamera({ modelIds: ['./models/crack1.trb'] });
+            // await delay(2000);
             await viewer.load('./models/crack2.trb', { resetCamera: false });
             viewer.setCamera({ modelIds: ['./models/crack2.trb'] });
             await delay(2000);
@@ -93,9 +96,9 @@ customElements.whenDefined("webgl-viewer").then(async () => {
             await delay(2000);
             await viewer.load('./models/crack6.trb', { resetCamera: false });
             viewer.setCamera({ modelIds: ['./models/crack6.trb'] });
-            await delay(2000);
-            await viewer.load('./models/crack7.trb', { resetCamera: false });
-            viewer.setCamera({ modelIds: ['./models/crack7.trb'] });
+            // await delay(1000);
+            // await viewer.load('./models/crack7.trb', { resetCamera: false });
+            // viewer.setCamera({ modelIds: ['./models/crack7.trb'] });
         });
     }
 

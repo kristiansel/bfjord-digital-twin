@@ -2,7 +2,7 @@
   overflow: hidden;
   display: grid;
   grid-gap: 0px;
-  grid-template-columns: 50vw 50vw;
+  grid-template-columns: 60vw 40vw;
   grid-template-rows: 50px calc(50vh - 25px) calc(50vh - 25px);
   grid-template-areas:
   "topbar   topbar"
