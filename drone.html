@@ -22,7 +22,7 @@
   </style>
   <div class="wrapper">
     <div class="box topbar">
-      <img class="logo" src="assets/statens_vegvesen.png"></img>
+      <img class="logo" src="assets/statens_vegvesen_new.png"></img>
       <span class="title">Bjørnaforden Bru Drift og Vedlikehold</span>
       <div class="flex-separator"></div>
       <a href="index.html" id="btn_environment" class="topbar-button">Environment</a>
@@ -36,19 +36,24 @@
         Your browser does not support the video tag.
       </video>
     </div>
-    <div id="viewerwrapper" class="box view">
-      <button id="fullscreen">Fullscreen On/Off</button>
-      <button id="flightpath">Draw Drone Flight Path</button>
-      <button id="startdrone">Start Drone</button>
-      <webgl-viewer active-tool="selection" id="viewer">
-        <trimbim-plugin slot="plugins"></trimbim-plugin>
-      </webgl-viewer>
+    <div id="viewerwrapper" class="box view view-inner-wrapper">
+      <div class="viewer-div">
+        <webgl-viewer active-tool="selection" id="viewer">
+          <trimbim-plugin slot="plugins"></trimbim-plugin>
+        </webgl-viewer>
+      </div>
+      <div class="view-buttons-wrapper">
+        <button id="fullscreen">Fullscreen On/Off</button>
+        <button id="flightpath">Draw Drone Flight Path</button>
+        <button id="startdrone">Start Drone</button>
+      </div>
     </div>
     <div class="box cracks">
       Cracks
     </div>
     <div class="box info">
       Info
+      <button>test</button>
     </div>
   </div>
   <script src="drone.js"></script>

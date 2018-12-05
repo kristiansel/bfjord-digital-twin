@@ -3,7 +3,7 @@
 <html>
 
 <head>
-  <title>Bjørnaforden Bru Drift og Vedlikehold</title>
+  <title>Forvaltning, drift og vedlikehold av Bjørnafjorden</title>
   <link rel="stylesheet" type="text/css" href="css/common.css">
   <link rel="stylesheet" type="text/css" href="css/index.css">
   <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet"> 
@@ -27,8 +27,8 @@
   </style>
   <div class="wrapper">
     <div class="box topbar">
-      <img class="logo" src="assets/statens_vegvesen_nice_inverted_logo.png"></img>
-      <span class="title">Bjørnaforden Bru Drift og Vedlikehold</span>
+      <img class="logo" src="assets/statens_vegvesen_new.png"></img>
+      <span class="title">Forvaltning, drift og vedlikehold av Bjørnafjorden</span>
       <div class="flex-separator"></div>
       <a href="index.html" id="btn_environment" class="topbar-button">Environment</a>
       <a href="drone.html" id="btn_drone_inspection" class="topbar-button">Drone Inspection</a>
@@ -37,15 +37,17 @@
     <div class="box info">
       <div id="container2" style="height: 400px; margin: 0 auto"></div>
     </div>
-    <div id="viewerwrapper" class="box view">
+    <div id="viewerwrapper" class="box view view-inner-wrapper">
+      <div class="viewer-div">
+        <webgl-viewer active-tool="selection" id="viewer">
+          <trimbim-plugin slot="plugins"></trimbim-plugin>
+        </webgl-viewer>
+      </div>
+      <div class="view-buttons-wrapper">
         <button id="fullscreen">Fullscreen On/Off</button>
         <button id="ortho">Terrain On/Off</button>
-        <button id="flightpath">Draw Drone Flight Path</button>
-        <button id="startdrone">Start Drone</button>
         <button id="nvdb">NVDB Data On/Off</button>
-      <webgl-viewer active-tool="selection" id="viewer">
-        <trimbim-plugin slot="plugins"></trimbim-plugin>
-      </webgl-viewer>
+      </div>
     </div>
     <div class="box sensor">
       <div id="container" style="min-width: 310px; height: 400px; margin: 0 auto"></div>

@@ -49,3 +49,16 @@
 .flex-separator {
   flex: 1;
 }
+
+.view-buttons-wrapper {
+  position: absolute;
+}
+
+.viewer-div {
+  position: absolute;
+  height: 100%;
+}
+
+.view-inner-wrapper {
+  position: relative;
+}
