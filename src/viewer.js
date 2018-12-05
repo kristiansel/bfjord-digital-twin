@@ -21,6 +21,17 @@ customElements.whenDefined("webgl-viewer").then(async () => {
             if (items[0].modelId.includes('crack1')) {
                 console.info('Crack selected!');
             }
+            for(const item of items){
+                if(item.entities.length){
+                    trimbim.getEntityInfo(item.modelId, item.entities[0].id).then(info => {
+                        console.info(info);
+                        if(info.product.name.includes('LYSARMATUR') || info.product.name.includes('LYSMAST')){
+                            console.info('LYSARMATUR detected!');
+                            window.open('./models/lysmast.pdf', '_blank');
+                        }
+                    });
+                }
+            }
         });
 
         // for (const model of Object.keys(e.detail)) {

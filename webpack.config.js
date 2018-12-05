@@ -41,7 +41,7 @@ module.exports = {
       { from: 'src/sw.js' },
       { from: 'models/bru2.trb', to: 'models/bru2.trb'},
       { from: 'models/pongtonger2.trb', to: 'models/pongtonger2.trb'},
-      { from: 'models/ortho.trb', to: 'models/ortho.trb'},
+      { from: 'models/ortho2.trb', to: 'models/ortho2.trb'},
       { from: 'models/flightpath2.trb', to: 'models/flightpath2.trb'},
       { from: 'models/crack1.trb', to: 'models/crack1.trb'},
       { from: 'models/crack2.trb', to: 'models/crack2.trb'},
@@ -49,7 +49,9 @@ module.exports = {
       { from: 'models/crack4.trb', to: 'models/crack4.trb'},
       { from: 'models/crack5.trb', to: 'models/crack5.trb'},
       { from: 'models/crack6.trb', to: 'models/crack6.trb'},
-      { from: 'models/crack7.trb', to: 'models/crack7.trb'}
+      { from: 'models/crack7.trb', to: 'models/crack7.trb'},
+      { from: 'models/lysmast.pdf', to: 'models/lysmast.pdf'}
+
     ])
   ]
 };
