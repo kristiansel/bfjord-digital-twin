@@ -1,12 +1,17 @@
 
-//import { Matrix4, Vector3, Euler } from "https://cdnjs.cloudflare.com/ajax/libs/three.js/95/three.module.js";
+import { Matrix4, Vector3, Euler } from "https://cdnjs.cloudflare.com/ajax/libs/three.js/95/three.module.js";
+
+let terrainLoaded = false;
+let nvdbLoaded = false;
+
 customElements.whenDefined("webgl-viewer").then(async () => {
     const viewer = document.querySelector('webgl-viewer');
     const trimbim = document.querySelector('trimbim-plugin');
     viewer.settings.backgroundColor = 0xffffff;
     await viewer.load('./models/bru2.trb');
     await viewer.load('./models/pongtonger2.trb', { resetCamera: false });
-    await viewer.load('./models/ortho.trb', { resetCamera: false });
+    // await viewer.load('./models/ortho2.trb', { resetCamera: false });
+    // terrainLoaded = true;
 
     viewer.addEventListener("selection", function (e) {
         console.log(e);
@@ -34,22 +39,22 @@ customElements.whenDefined("webgl-viewer").then(async () => {
         const wrapperviewer = document.getElementById("viewerwrapper");
         if (document.webkitFullscreenEnabled) {
             document.webkitExitFullscreen();
-          }
-          if (document.mozFullScreenEnabled) {
+        }
+        if (document.mozFullScreenEnabled) {
             document.mozCancelFullScreen();
-          }
-          if (document.msFullscreenEnabled) {
+        }
+        if (document.msFullscreenEnabled) {
             document.msExitFullscreen();
-          }
-          if (viewer.webkitRequestFullscreen) {
+        }
+        if (viewer.webkitRequestFullscreen) {
             wrapperviewer.webkitRequestFullscreen();
-          }
-          if (viewer.mozRequestFullScreen) {
+        }
+        if (viewer.mozRequestFullScreen) {
             wrapperviewer.mozRequestFullScreen();
-          }
-          if (viewer.msRequestFullscreen) {
+        }
+        if (viewer.msRequestFullscreen) {
             wrapperviewer.msRequestFullscreen();
-          }
+        }
     });
 
     document.getElementById("flightpath").addEventListener('click', async function (e) {
@@ -59,7 +64,7 @@ customElements.whenDefined("webgl-viewer").then(async () => {
     });
 
     document.getElementById("startdrone").addEventListener('click', async function (e) {
-        const delay = time => new Promise(res=>setTimeout(()=>res(),time));
+        const delay = time => new Promise(res => setTimeout(() => res(), time));
 
         console.info('startdrone selected!');
         await viewer.load('./models/crack1.trb', { resetCamera: false });
@@ -84,5 +89,33 @@ customElements.whenDefined("webgl-viewer").then(async () => {
         viewer.setCamera({ modelIds: ['./models/crack7.trb'] });
 
 
+    });
+
+    document.getElementById("ortho").addEventListener('click', async function (e) {
+        console.info('ortho selected');
+        if (!terrainLoaded) {
+            await viewer.load('./models/ortho2.trb', { resetCamera: false });
+            terrainLoaded = true;
+        } else {
+            await viewer.unload('./models/ortho2.trb', { resetCamera: false });
+            terrainLoaded = false;
+        }
+    });
+
+    document.getElementById("nvdb").addEventListener('click', async function (e) {
+        console.info('nvdb selected');
+
+        const mat = new Matrix4();
+        mat.setPosition(new Vector3(-298000.0, -6666000.0, 8.0));
+
+
+        if (!nvdbLoaded) {
+            await viewer.load('./models/nvdb.trb', { transform: mat, resetCamera: false });
+            // viewer.setCamera({ modelIds: ['./models/nvdb.trb'] });
+            nvdbLoaded = true;
+        } else {
+            await viewer.unload('./models/nvdb.trb', { resetCamera: false });
+            nvdbLoaded = false;
+        }
     });
 });
