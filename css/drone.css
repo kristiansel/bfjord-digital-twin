@@ -1,0 +1,26 @@
+.wrapper {
+  overflow: hidden;
+  display: grid;
+  grid-gap: 0px;
+  grid-template-columns: 50vw 50vw;
+  grid-template-rows: 50px calc(50vh - 25px) calc(50vh - 25px);
+  grid-template-areas:
+  "topbar   topbar"
+  "video    view  "
+  "cracks   info  ";
+  background-color: #fff;
+  color: #444;
+}
+
+.video {
+  grid-area: video;
+}
+.view {
+  grid-area: view;
+}
+.cracks {
+  grid-area: cracks;
+}
+.info {
+  grid-area: info;
+}

@@ -1,0 +1,32 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+.topbar-button {
+  background-color: black;
+  border: none;
+  color: white;
+  padding: 5px 10px;
+  margin-right: 5px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 1em;
+}
+
+.topbar-button:hover {
+  background-color: white;
+  color: black;
+}
+
+.topbar-button:focus {
+  outline: none;
+}
+
+.topbar {
+  grid-area: topbar;
+  background-color: black;
+  display: flex;
+  align-items: center;
+}
