@@ -11,7 +11,7 @@ fetch('assets/usdeur.json')
         type: 'spline',
         animation: Highcharts.svg, // don't animate in old IE
         marginRight: 10,
-        height: 250,
+        height: 150,
         events: {
           load(this: any) {
             // set up the updating of the chart each second
