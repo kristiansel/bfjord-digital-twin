@@ -1,2 +1,2 @@
 import './envplots';
-import './sensorplot';
+import './livesensorplot';
