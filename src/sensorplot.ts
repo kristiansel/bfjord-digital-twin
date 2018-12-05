@@ -12,21 +12,22 @@ fetch('assets/usdeur.json')
     Highcharts.chart('container', {
       chart: {
         zoomType: 'x',
-        height: 300
+        height: 250
       },
       title: {
-        text: 'Bridge oscillation frequency'
+        text: ''
+        // text: 'Bridge oscillation frequency'
       },
-      subtitle: {
-        text: document.ontouchstart === undefined ?
-          'Click and drag in the plot area to zoom in' : 'Pinch the chart to zoom in'
-      },
+      // subtitle: {
+      //   text: document.ontouchstart === undefined ?
+      //     'Click and drag in the plot area to zoom in' : 'Pinch the chart to zoom in'
+      // },
       xAxis: {
         type: 'datetime'
       },
       yAxis: {
         title: {
-          text: 'Frequency'
+          text: 'Bridge oscillation amplitude'
         }
       },
       legend: {
