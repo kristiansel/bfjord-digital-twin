@@ -30,6 +30,7 @@ module.exports = {
       { from: 'node_modules/@technology/webgl-viewer/dist', to: 'node_modules/@technology/webgl-viewer/dist' },
       { from: 'node_modules/@technology/webgl-viewer/images', to: 'node_modules/@technology/webgl-viewer/images' },
       { from: 'node_modules/@technology/webgl-viewer/fonts', to: 'node_modules/@technology/webgl-viewer/fonts' },
+      { from: 'src/sw.js' },
       { from: 'models/Bru.trb', to: 'models/Bru.trb'}
     ])
   ]
