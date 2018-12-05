@@ -1,2 +1,2 @@
-import './syncplots';
-import './mainplot';
+import './envplots';
+import './sensorplot';

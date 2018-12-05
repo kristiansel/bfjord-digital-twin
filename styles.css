@@ -1,0 +1,54 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+.wrapper {
+  overflow: hidden;
+  display: grid;
+  grid-gap: 0px;
+  grid-template-columns: 30vw 35vw 35vw;
+  grid-template-rows: 50px calc(100vh - 350px) 300px;
+  grid-template-areas:
+  "topbar topbar topbar"
+  "info   view   view"
+  "info   sensor sensor";
+  background-color: #fff;
+  color: #444;
+  /* width: 100vw;
+  height: 100vh; */
+}
+
+.topbar-button {
+  background-color: white;
+  border-radius: 0.5em;
+  border: none;
+  color: black;
+  padding: 5px 10px;
+  margin-right: 5px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.topbar-button:hover {
+  background-color: #003459;
+  color: white;
+}
+
+.topbar {
+  grid-area: topbar;
+  margin: 5px;
+  display: flex;
+}
+.info {
+  grid-area: info;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+.view {
+  grid-area: view;
+}
+.sensor {
+  grid-area: sensor;
+}
