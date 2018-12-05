@@ -13,11 +13,6 @@
 </head>
 
 <body>
-  <script>
-    if ("serviceWorker" in navigator) {
-      navigator.serviceWorker.register("sw.js");
-    }
-  </script>
   <style>
     body {
       font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -30,24 +25,19 @@
       <a href="traffic.html" id="btn_traffic" class="topbar-button">Traffic</a>
     </div>
     <div class="box info">
-      <div id="container2" style="height: 400px; margin: 0 auto"></div>
     </div>
     <div id="viewerwrapper" class="box view">
         <button id="fullscreen">Fullscreen On/Off</button>
-        <button id="ortho">Terrain On/Off</button>
         <button id="flightpath">Draw Drone Flight Path</button>
         <button id="startdrone">Start Drone</button>
-        <button id="nvdb">NVDB Data On/Off</button>
       <webgl-viewer active-tool="selection" id="viewer">
         <trimbim-plugin slot="plugins"></trimbim-plugin>
       </webgl-viewer>
     </div>
     <div class="box sensor">
-      <div id="container" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
     </div>
   </div>
-  <!-- <script src="https://www.yr.no/place/Norway/Hordaland/Tysnes/Bjørnafjorden/external_box_hour_by_hour.js"></script><noscript><a href="https://www.yr.no/place/Norway/Hordaland/Tysnes/Bjørnafjorden/">yr.no: Forecast for Bjørnafjorden</a></noscript> -->
-  <script src="index.js"></script>
+  <script src="drone.js"></script>
   <script src="src/viewer.js" type="module"></script>
 </body>
 

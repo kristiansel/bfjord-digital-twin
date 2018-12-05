@@ -7,7 +7,7 @@
   overflow: hidden;
   display: grid;
   grid-gap: 0px;
-  grid-template-columns: 30vw 35vw 35vw;
+  grid-template-columns: 40vw 30vw 30vw;
   grid-template-rows: 50px calc(100vh - 300px) 250px;
   grid-template-areas:
   "topbar topbar topbar"
@@ -44,6 +44,7 @@
   grid-area: topbar;
   background-color: black;
   display: flex;
+  align-items: center;
 }
 .info {
   grid-area: info;

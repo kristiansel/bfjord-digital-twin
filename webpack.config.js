@@ -3,11 +3,14 @@ const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 module.exports = {
   mode: 'production',
-  entry: './src/index.tsx',
+  entry: {
+    index: './src/index.ts',
+    drone: './src/drone.ts'
+  },
   output: {
-    filename: 'index.js',
+    filename: '[name].js',
     path: path.resolve(__dirname, 'dist'),
-    library: 'DroneInspection',
+    // library: 'DroneInspection',
     libraryTarget: 'umd'
   },
   module: {

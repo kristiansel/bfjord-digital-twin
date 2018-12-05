@@ -97,7 +97,7 @@ fetch('assets/plotdata.json')
           marginLeft: 40, // Keep all charts left aligned
           spacingTop: 20,
           spacingBottom: 20,
-          height: 250
+          height: 200
         },
         title: {
           text: dataset.name,
