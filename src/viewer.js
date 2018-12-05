@@ -6,16 +6,19 @@ customElements.whenDefined("webgl-viewer").then(async () => {
     viewer.settings.backgroundColor = 0xffffff;
     await viewer.load('./models/Bru.trb');
     await viewer.load('./models/Pongtonger.trb', { resetCamera: false });
-    await viewer.load('./models/ortho.trb', { resetCamera: false });
+    //await viewer.load('./models/ortho.trb', { resetCamera: false });
 
     await viewer.load('./models/flightpath2.trb', { resetCamera: false });
-    await viewer.load('./models/crack1.trb', { resetCamera: false });
+    await viewer.load('./models/crack1.trb', { resetCamera: true });
 
     viewer.addEventListener("selection", function (e) {
         console.log(e);
 
         trimbim.getSelectedEntities().then(items => {
             console.info(items);
+            if(items[0].modelId.includes('crack1')){
+                console.info('Crack selected!');
+            }
         });
 
         // for (const model of Object.keys(e.detail)) {
