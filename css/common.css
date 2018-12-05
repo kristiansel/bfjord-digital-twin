@@ -30,3 +30,11 @@
   display: flex;
   align-items: center;
 }
+
+.title {
+  margin-left: 10px;
+  margin-right: 20px;
+  color: #cac6c6;
+  font-weight: 600;
+  font-variant: small-caps;
+}
