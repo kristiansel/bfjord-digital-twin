@@ -8,6 +8,7 @@
   <script type="module">
     import "/node_modules/@technology/webgl-viewer/dist/es/TrimbimPlugin.js";
     import "/node_modules/@technology/webgl-viewer/dist/es/WebglViewer.js";
+    import "/webgl-viewer/dist/es/MarkupPlugin.js";
   </script>
 </head>
 
@@ -32,7 +33,7 @@
       <div id="container2" style="height: 400px; margin: 0 auto"></div>
     </div>
     <div class="box view">
-      <webgl-viewer active-tool="selection" id="viewer" model="./models/Bru.trb">
+      <webgl-viewer active-tool="selection" id="viewer">
         <trimbim-plugin slot="plugins"></trimbim-plugin>
       </webgl-viewer>
     </div>
@@ -42,6 +43,7 @@
   </div>
   <!-- <script src="https://www.yr.no/place/Norway/Hordaland/Tysnes/Bjørnafjorden/external_box_hour_by_hour.js"></script><noscript><a href="https://www.yr.no/place/Norway/Hordaland/Tysnes/Bjørnafjorden/">yr.no: Forecast for Bjørnafjorden</a></noscript> -->
   <script src="index.js"></script>
+  <script src="src/viewer.js" type="module"></script>
 </body>
 
 </html>
