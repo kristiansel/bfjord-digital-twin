@@ -1,0 +1,36 @@
+{
+  "xData": [
+    "Fri, 02 Feb 1996 03:04:05 GMT",
+    "Sat, 03 Feb 1996 03:04:05 GMT",
+    "Sun, 04 Feb 1996 03:04:05 GMT"
+  ],
+  "datasets": [
+    {
+      "name": "Test data",
+      "data": [
+        1, 2, 3
+      ],
+      "unit": "test unit",
+      "type": "line",
+      "valueDecimals": 0
+    },
+    {
+      "name": "Test data 2",
+      "data": [
+        3, 2, 1
+      ],
+      "unit": "test unit",
+      "type": "line",
+      "valueDecimals": 0
+    },
+    {
+      "name": "Test data 3",
+      "data": [
+        3, 2, 1
+      ],
+      "unit": "test unit",
+      "type": "line",
+      "valueDecimals": 0
+    }
+  ]
+}

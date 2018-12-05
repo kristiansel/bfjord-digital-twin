@@ -78,7 +78,7 @@ function syncExtremes(this: any, e: any) {
 }
 
 // Get the data. The contents of the data file can be viewed at
-fetch('assets/envdata.json')
+fetch('assets/testdata.json')
   .then(response => response.json())
   .then(activity => { 
     activity.datasets.forEach((dataset: any, i: number) => {
@@ -118,7 +118,8 @@ fetch('assets/envdata.json')
           },
           labels: {
             format: '{value} km'
-          }
+          },
+          type: 'datetime'
         },
         yAxis: {
           title: {
