@@ -36,6 +36,10 @@
   color: black;
 }
 
+.topbar-button:focus {
+  outline: none;
+}
+
 .topbar {
   grid-area: topbar;
   background-color: black;

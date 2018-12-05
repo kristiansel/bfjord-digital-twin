@@ -8,7 +8,7 @@
   <script type="module">
     import "/node_modules/@technology/webgl-viewer/dist/es/TrimbimPlugin.js";
     import "/node_modules/@technology/webgl-viewer/dist/es/WebglViewer.js";
-    import "/webgl-viewer/dist/es/MarkupPlugin.js";
+    import "/node_modules/@technology/webgl-viewer/dist/es/MarkupPlugin.js";
   </script>
 </head>
 
@@ -33,6 +33,7 @@
       <div id="container2" style="height: 400px; margin: 0 auto"></div>
     </div>
     <div class="box view">
+      <button>Fullscreen</button>
       <webgl-viewer active-tool="selection" id="viewer">
         <trimbim-plugin slot="plugins"></trimbim-plugin>
       </webgl-viewer>
