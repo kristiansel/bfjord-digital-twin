@@ -52,6 +52,7 @@
 
 .view-buttons-wrapper {
   position: absolute;
+  display: flex;
 }
 
 .viewer-div {

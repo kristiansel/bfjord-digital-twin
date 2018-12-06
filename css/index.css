@@ -25,3 +25,15 @@
 .sensor {
   grid-area: sensor;
 }
+
+.legend-img {
+  width: 125px;
+  height: 500px;
+}
+.legend-div {
+  display: flex; 
+  position: absolute; 
+  height: 100%;
+  width: 100%; 
+  overflow-y: auto; 
+}
