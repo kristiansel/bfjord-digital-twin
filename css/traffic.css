@@ -1,0 +1,18 @@
+.wrapper {
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: 100vw;
+  grid-template-rows: 50px calc(100vh - 50px);
+  grid-template-areas:
+  "topbar   "
+  "video    ";
+  background-color: #fff;
+  color: #444;
+}
+
+.video {
+  grid-area: video;
+}
+.view {
+  grid-area: view;
+}

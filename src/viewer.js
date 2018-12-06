@@ -178,7 +178,7 @@ function updateCrackInfo(n) {
     const crackInfo = crackInfos[i];
 
     const crackNo = document.createElement('div');
-    crackNo.innerText = "Crack number: "+n.toString();
+    crackNo.innerText = "Sprekk nummer: "+n.toString();
     crackNo.style = "padding: 0px 0px 10px 0px;";
     info.appendChild(crackNo);
 
