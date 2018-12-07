@@ -39,19 +39,14 @@ module.exports = {
       { from: 'node_modules/@technology/webgl-viewer/images', to: 'node_modules/@technology/webgl-viewer/images' },
       { from: 'node_modules/@technology/webgl-viewer/fonts', to: 'node_modules/@technology/webgl-viewer/fonts' },
       { from: 'src/sw.js' },
-      { from: 'models/bru2.trb', to: 'models/bru2.trb'},
-      { from: 'models/pongtonger2.trb', to: 'models/pongtonger2.trb'},
-      { from: 'models/ortho2.trb', to: 'models/ortho2.trb'},
-      { from: 'models/flightpath2.trb', to: 'models/flightpath2.trb'},
-      { from: 'models/crack1.trb', to: 'models/crack1.trb'},
-      { from: 'models/crack2.trb', to: 'models/crack2.trb'},
-      { from: 'models/crack3.trb', to: 'models/crack3.trb'},
-      { from: 'models/crack4.trb', to: 'models/crack4.trb'},
-      { from: 'models/crack5.trb', to: 'models/crack5.trb'},
-      { from: 'models/crack6.trb', to: 'models/crack6.trb'},
-      { from: 'models/crack7.trb', to: 'models/crack7.trb'},
-      { from: 'models/lysmast.pdf', to: 'models/lysmast.pdf'}
-
+      { from: 'src/viewer.js', to: 'src/viewer.js' },
+      { from: 'css/', to: 'css/' },
+      { from: 'assets/', to: 'assets/' },
+      { from: 'models/', to: 'models/' },
+      { from: 'index.html' },
+      { from: 'drone.html' },
+      { from: 'traffic.html' },
+      { from: 'wind.html' }
     ])
   ]
 };
