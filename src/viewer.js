@@ -190,6 +190,8 @@ function updateCrackInfo(n) {
         info.appendChild(el);
     })
 
+    // updateCrackPlot(n);
+
     console.log("updated crack info with: ", crackInfo);
 }
 
@@ -220,3 +222,78 @@ const crackInfos = [
         Beskrivelse: "Stabil, ingen tiltak nødvendig."
     }
 ]
+
+// function updateCrackPlot(n) {
+//     const container = document.getElementById('crack-plot');
+//     container.innerHTML = '';
+
+//     const chartDiv = document.createElement('div');
+//     chartDiv.style = "height:200px; margin: 0 auto;";
+//     container.appendChild(chartDiv);
+
+//     const i = n-1;
+//     fetch('assets/crackplots.json')
+//     .then(response => response.json())
+//     .then(crackPlots => { 
+//         const dataset = crackPlots.datasets[i];
+        
+//         console.log("creating crack plot...");
+//         Highcharts.chart(chartDiv, {
+//             chart: {
+//               marginLeft: 40, // Keep all charts left aligned
+//               spacingTop: 20,
+//               spacingBottom: 20,
+//               height: 200
+//             },
+//             title: {
+//               text: dataset.name,
+//               align: 'left',
+//               margin: 0,
+//               x: 30
+//             },
+//             credits: {
+//               enabled: false
+//             },
+//             legend: {
+//               enabled: false
+//             },
+//             xAxis: {
+//               crosshair: true,
+//               type: 'datetime'
+//             },
+//             yAxis: {
+//               title: {
+//                 text: null
+//               }
+//             },
+//             tooltip: {
+//               positioner: function() {
+//                 return {
+//                   // right aligned
+//                   x: this.chart.chartWidth - this.label.width,
+//                   y: 10 // align to title
+//                 };
+//               },
+//               borderWidth: 0,
+//               backgroundColor: 'none',
+//               pointFormat: '{point.y}',
+//               headerFormat: '',
+//               shadow: false,
+//               style: {
+//                 fontSize: '18px'
+//               },
+//               valueDecimals: dataset.valueDecimals
+//             },
+//             series: [{
+//               data: dataset.data,
+//               name: dataset.name,
+//               type: dataset.type,
+//               color: Highcharts.getOptions().colors[i],
+//               fillOpacity: 0.3,
+//               tooltip: {
+//                 valueSuffix: ' ' + dataset.unit
+//               }
+//             }]
+//           });
+//         });
+// }
