@@ -3,11 +3,12 @@
   display: grid;
   grid-gap: 0px;
   grid-template-columns: 30vw 35vw 35vw;
-  grid-template-rows: 50px calc(100vh - 200px) 150px;
+  grid-template-rows: 50px calc(100vh - 235px) 150px 35px;
   grid-template-areas:
   "topbar topbar topbar"
   "info   view   view"
-  "info   sensor sensor";
+  "info   sensor sensor"
+  "footer footer footer";
   background-color: #fff;
   color: #444;
   /* width: 100vw;
@@ -16,6 +17,7 @@
 
 .info {
   grid-area: info;
+  border-right: solid 1px #e3e3e3;
   overflow-y: auto;
   overflow-x: hidden;
 }
@@ -24,6 +26,7 @@
 }
 .sensor {
   grid-area: sensor;
+  border-top: solid 1px #e3e3e3;
 }
 
 .legend-img {

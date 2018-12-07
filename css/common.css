@@ -64,3 +64,44 @@
 .view-inner-wrapper {
   position: relative;
 }
+
+.pure-button {
+  font-family: inherit;
+  font-size: 100%;
+  padding: .5em 1em;
+  color: #444;
+  color: rgba(0,0,0,.8);
+  border: 1px solid #999;
+  border: transparent;
+  background-color: #E6E6E6;
+  text-decoration: none;
+  border-radius: 2px;
+  display: inline-block;
+  zoom: 1;
+  white-space: nowrap;
+  vertical-align: middle;
+  text-align: center;
+  cursor: pointer;
+  -webkit-user-drag: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  border-right: solid 1px #fff;
+}
+
+.pure-button-hover, .pure-button:focus, .pure-button:hover {
+  filter: alpha(opacity=90);
+  background-image: -webkit-linear-gradient(transparent,rgba(0,0,0,.05) 40%,rgba(0,0,0,.1));
+  background-image: linear-gradient(transparent,rgba(0,0,0,.05) 40%,rgba(0,0,0,.1));
+}
+
+.footer {
+  grid-area: footer;
+  background-color: #ededed;
+  display: flex;
+  align-items: center;
+  color: #a3a3a3;
+  padding: 0 20px;
+  font-size: 14px;
+}
