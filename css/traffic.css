@@ -2,10 +2,11 @@
   overflow: hidden;
   display: grid;
   grid-template-columns: 100vw;
-  grid-template-rows: 50px calc(100vh - 50px);
+  grid-template-rows: 50px calc(100vh - 85px) 35px;
   grid-template-areas:
   "topbar   "
-  "video    ";
+  "video    "
+  "footer   ";
   background-color: #fff;
   color: #444;
 }
