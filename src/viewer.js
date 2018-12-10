@@ -136,12 +136,12 @@ customElements.whenDefined("webgl-viewer").then(async () => {
 
             if (!nvdbLoaded) {
                 document.getElementById('legend-div').style.visibility = "visible";
-                await viewer.load('./models/nvdb.trb', { transform: mat, resetCamera: false });
+                await viewer.load('./models/nvdb2.trb', { transform: mat, resetCamera: false });
                 // viewer.setCamera({ modelIds: ['./models/nvdb.trb'] });
                 nvdbLoaded = true;
             } else {
                 document.getElementById('legend-div').style.visibility = "hidden";
-                await viewer.unload('./models/nvdb.trb', { resetCamera: false });
+                await viewer.unload('./models/nvdb2.trb', { resetCamera: false });
                 nvdbLoaded = false;
             }
         });
